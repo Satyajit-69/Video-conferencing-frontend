@@ -4,6 +4,9 @@ import Snackbar from "@mui/material/Snackbar";
 
 const AuthContext = createContext();
 
+// 🔥 Backend BASE URL (Correct)
+const BASE_URL = "http://ec2-13-62-211-75.eu-north-1.compute.amazonaws.com:5000";
+
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(() => {
     return JSON.parse(localStorage.getItem("user")) || null;
@@ -37,7 +40,7 @@ export const AuthProvider = ({ children }) => {
     try {
       setLoading(true);
 
-      const res = await fetch("http://ec2-13-62-211-75.eu-north-1.compute.amazonaws.com//api/users/login", {
+      const res = await fetch(`${BASE_URL}/api/users/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, password }),
@@ -52,7 +55,7 @@ export const AuthProvider = ({ children }) => {
       localStorage.setItem("user", JSON.stringify(data.user));
       localStorage.setItem("welcomeMode", "login");
 
-      showAlert("success", "Successfully logged in!");
+      showAlert("success", "Successfully logged in! 🤝");
       return { success: true };
 
     } catch (err) {
@@ -70,7 +73,7 @@ export const AuthProvider = ({ children }) => {
     try {
       setLoading(true);
 
-      const res = await fetch("http://ec2-13-62-211-75.eu-north-1.compute.amazonaws.com//api/users/register", {
+      const res = await fetch(`${BASE_URL}/api/users/register`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, username, password }),
@@ -85,7 +88,7 @@ export const AuthProvider = ({ children }) => {
       localStorage.setItem("user", JSON.stringify(data.user));
       localStorage.setItem("welcomeMode", "register");
 
-      showAlert("success", "Account created successfully!");
+      showAlert("success", "Account created successfully! 🎉🎊");
       return { success: true };
 
     } catch (err) {
