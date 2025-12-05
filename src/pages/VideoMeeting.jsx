@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import io from "socket.io-client";
 
-const SOCKET_SERVER = "http://localhost:5000";
+const SOCKET_SERVER = "http://ec2-13-62-211-75.eu-north-1.compute.amazonaws.com/";
 
 export default function VideoMeeting() {
   const localVideo = useRef(null);
