@@ -39,7 +39,7 @@ function Navbar() {
           </div>
 
           {/* DESKTOP MENU */}
-          <div className="md:flex items-center gap-8">
+          <div className="md:flex items-center gap-7">
             
             {/* Hide menu items inside meeting */}
             {!inMeeting && (
