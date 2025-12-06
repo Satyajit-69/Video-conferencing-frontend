@@ -5,7 +5,7 @@ import Snackbar from "@mui/material/Snackbar";
 const AuthContext = createContext();
 
 // 🔥 Backend BASE URL (Correct)
-const BASE_URL = "http://ec2-13-62-211-75.eu-north-1.compute.amazonaws.com:5000";
+const BASE_URL = "http://ec2-13-62-211-75.eu-north-1.compute.amazonaws.com";
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(() => {
@@ -55,7 +55,7 @@ export const AuthProvider = ({ children }) => {
       localStorage.setItem("user", JSON.stringify(data.user));
       localStorage.setItem("welcomeMode", "login");
 
-      showAlert("success", "Successfully logged in! 🤝");
+      showAlert("success", "Successfully logged in!");
       return { success: true };
 
     } catch (err) {
@@ -88,7 +88,7 @@ export const AuthProvider = ({ children }) => {
       localStorage.setItem("user", JSON.stringify(data.user));
       localStorage.setItem("welcomeMode", "register");
 
-      showAlert("success", "Account created successfully! 🎉🎊");
+      showAlert("success", "Account created successfully!");
       return { success: true };
 
     } catch (err) {
