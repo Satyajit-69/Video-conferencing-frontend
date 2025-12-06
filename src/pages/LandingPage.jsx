@@ -101,7 +101,7 @@ export default function VideoConferencingLanding() {
                   Start Free Trial <ArrowRight className="w-5 h-5" />
                 </button>
                 <button className="border border-slate-600 px-8 py-4 rounded-xl font-semibold hover:bg-slate-800 transition hover:scale-105 flex items-center gap-2 backdrop-blur-xl">
-                  <Play className="w-5 h-5" /> Watch Demo
+                  <Play className="w-5 h-5" /> See Demo
                 </button>
               </div>
 
