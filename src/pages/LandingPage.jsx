@@ -98,7 +98,7 @@ export default function VideoConferencingLanding() {
 
               <div className="flex flex-wrap gap-4 animate-slide-up" style={{animationDelay: '0.2s'}}>
                 <button className="bg-gradient-to-r from-blue-600 to-purple-600 px-8 py-4 rounded-xl font-semibold hover:shadow-xl hover:shadow-blue-500/50 transition hover:scale-105 flex items-center gap-2">
-                  Start Free Trial <ArrowRight className="w-5 h-5" />
+                  Get Started <ArrowRight className="w-5 h-5" />
                 </button>
                 <button className="border border-slate-600 px-8 py-4 rounded-xl font-semibold hover:bg-slate-800 transition hover:scale-105 flex items-center gap-2 backdrop-blur-xl">
                   <Play className="w-5 h-5" /> See Demo
