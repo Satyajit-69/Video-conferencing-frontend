@@ -5,7 +5,7 @@ import Snackbar from "@mui/material/Snackbar";
 const AuthContext = createContext();
 
 // 🔥 Backend BASE URL (Correct)
-const BASE_URL = "http://ec2-13-62-211-75.eu-north-1.compute.amazonaws.com";
+const BASE_URL = "http://ec2-13-62-211-75.eu-north-1.compute.amazonaws.com:5000";
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(() => {
